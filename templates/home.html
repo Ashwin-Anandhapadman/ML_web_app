@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FWI Prediction</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional: link to a CSS file for styling -->
-</head>
+
 <body>
     <div class="login">
         <h1>FWI Prediction Using Algerian Forest Data</h1>
@@ -21,9 +16,13 @@
             <input type="text" name="Classes" placeholder="Classes" required="required" /><br>
             <input type="text" name="Region" placeholder="Region" required="required" /><br>
 
+            <button type="submit" class="btn btn-primary btn-block btn-large"> Predict! </button>
         </form>
         
-        <h2>The FWI prediction is {{ results }}</h2>
+        <h2>The FWI prediction is {{results}}
+
+        </h2>
     </div>
+    
 </body>
 </html>
