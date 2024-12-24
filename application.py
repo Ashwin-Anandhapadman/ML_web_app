@@ -4,8 +4,20 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-application = Flask(__name__) 
+application = Flask(__name__) #we will use this application variable to deploy the model in AWS console 
 app = application
+
+'''
+In AWS console deployment:
+option_settings:
+    "aws:elasticbeanstalk:container:python":
+        WSGIPath: application: application
+
+        #the first application is the file name and the second one is the flask intialization
+'''
+
+
+
 
 # Import ridge regressor and standard scaler pickle files
 ridge_model = pickle.load(open('models/ash_ridge.pkl', 'rb'))
